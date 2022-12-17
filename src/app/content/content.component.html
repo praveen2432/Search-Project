@@ -1,0 +1,136 @@
+<div class="content row">
+  <div class="row search"><span class="search-font">Search Project</span></div>
+  <div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+      <div class="d-flex form-inputs">
+        <input class="form-control" type="text" placeholder="Search any product...">
+        <i class="fa fa-search"></i>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+
+  </div>
+  <div class="row"></div>
+</div>
+<div class="up-spc">
+  <div class="row filter-by">
+    <div><button style="padding: 0px 0px 0px 21px;" class="clear-btn success"><i class="fa fa-filter"
+          style="margin-right: 10px;"></i>Clear Filter</button></div>
+  </div>
+  <div class="row row-style">
+    <div class="col left-pad">
+      <h6>Category</h6>
+      <mat-form-field appearance="outline" style="width: 85%;">
+        <mat-label>Select Category</mat-label>
+        <mat-select>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col left-pad">
+      <h6>Sub-Category</h6>
+      <mat-form-field appearance="outline" style="width: 85%;">
+        <mat-label>Select Sub-Category</mat-label>
+        <mat-select>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col left-pad">
+      <h6>Delivery Time</h6>
+      <mat-form-field appearance="outline" style="width: 85%;">
+        <mat-label>Select Time</mat-label>
+        <mat-select>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col left-pad">
+      <h6>Country</h6>
+      <mat-form-field appearance="outline" style="width: 85%;">
+        <mat-label>Select Country</mat-label>
+        <mat-select>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col left-pad">
+      <h6>Post Day</h6>
+      <mat-form-field appearance="outline" style="width: 85%;">
+        <mat-label>Select Day</mat-label>
+        <mat-select>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+  </div>
+  <div class="row row-style">
+    <div class="col-md-2 left-pad">
+      <h6>Pricing</h6>
+      <mat-form-field appearance="outline" style="width: 103%;">
+        <mat-label>Select Price</mat-label>
+        <mat-select>
+          <mat-option value="option1">Option 1</mat-option>
+          <mat-option value="option2" disabled>Option 2 (disabled)</mat-option>
+          <mat-option value="option3">Option 3</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-md-1 clear-filter" style="margin-left: 38px;"><button class="clear-btn success">Clear
+        Filter</button></div>
+    <div class="col-md-3 apply"><button class="button">Apply</button></div>
+  </div>
+
+  <table class="table table-props">
+    <thead>
+      <tr class="row-style">
+        <th scope="col">Buyer</th>
+        <th scope="col">Project Details</th>
+        <th scope="col">Price</th>
+        <th scope="col">Delivery Time</th>
+        <th scope="col">Post Day</th>
+        <th scope="col">Offer</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-style" *ngFor="let data of tableData">
+        <td><img class="customer-img" src={{data.icon_path}} alt="Trulli" width="35" height="35"><strong
+            style="margin-left: 10px;">{{data.buyer}}</strong></td>
+        <td>{{data.project_details}}</td>
+        <td><strong>₹{{data.price}}</strong></td>
+        <td>
+          <div><strong>{{data.delivery_time}}</strong></div>
+        </td>
+        <td><strong>{{data.post_day}}</strong></td>
+        <td>{{data.offer}}</td>
+        <td><button class="btn"><i class="fa fa-send"></i> Send Offer</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row">
+    <nav>
+      <ul class="pagination d-flex justify-content-center flex-wrap pagination-flat">
+        <li class="page-item"><a class="page-link" href="#" data-abc="true"><i class="fa fa-angle-left"></i></a></li>
+        <li class="page-item active"><a class="page-link" href="#" data-abc="true">1</a></li>
+        <li class="page-item"><a class="page-link" href="#" data-abc="true">2</a></li>
+        <li class="page-item"><a class="page-link" href="#" data-abc="true">3</a></li>
+        <li class="page-item"><a class="page-link" href="#" data-abc="true">4</a></li>
+        <li class="page-item"><a class="page-link" href="#" data-abc="true"><i class="fa fa-angle-right"></i></a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
